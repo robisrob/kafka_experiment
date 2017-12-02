@@ -1,4 +1,4 @@
-package com.github.robisrob.controllers;
+package com.github.robisrob.kafka_experiment.application.controllers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
