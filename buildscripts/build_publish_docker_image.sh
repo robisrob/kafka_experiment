@@ -8,4 +8,4 @@ cd docker_workdir
 docker build -t robisrob/kafka-experiment:$TRAVIS_BUILD_NUMBER .
 docker login -u=$HEROKU_USERNAME -p=$HEROKU_AUTH_TOKEN registry.heroku.com;
 docker tag robisrob/kafka-experiment:$TRAVIS_BUILD_NUMBER registry.heroku.com/kafka-experiment/web;
-docker push registry.heroku.com/partei/web;
+docker push registry.heroku.com/kafka-experiment/web;
