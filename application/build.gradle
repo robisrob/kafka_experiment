@@ -1,0 +1,7 @@
+apply plugin: 'application'
+
+mainClassName = "com.github.robisrob.controllers.KafkaController"
+
+dependencies {
+    implementation project(':domain')
+}

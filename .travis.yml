@@ -1,0 +1,10 @@
+dist: trusty
+sudo: false
+language: java
+services:
+  - docker
+script:
+  - ./gradlew build
+  - ./gradlew distZip
+after_success:
+  - sh buildscripts/build_publish_docker_image.sh

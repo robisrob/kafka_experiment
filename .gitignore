@@ -4,3 +4,5 @@ build
 *.iml
 *~
 *target
+out
+.DS_Store
