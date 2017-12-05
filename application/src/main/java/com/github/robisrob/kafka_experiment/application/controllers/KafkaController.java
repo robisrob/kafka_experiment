@@ -18,9 +18,14 @@ public class KafkaController {
         SpringApplication.run(KafkaController.class, args);
     }
 
-    @RequestMapping("/callback")
+    @PostMapping("/callback")
     @ResponseBody
     String home(@RequestBody(required = false) String body) {
         return body;
+    }
+
+    @GetMapping("/callback")
+    public String getCallBack(@RequestParam(name = "hub.challenge") String challenge) {
+        return challenge;
     }
 }
