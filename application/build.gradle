@@ -3,6 +3,10 @@ plugins {
     id 'com.palantir.docker' version '0.13.0'
 }
 
+ext {
+    buildNumber = 'SNAPSHOT'
+}
+
 mainClassName = "com.github.robisrob.kafka_experiment.application.controllers.KafkaController"
 
 dependencies {
@@ -11,7 +15,13 @@ dependencies {
 }
 
 docker {
-    name "robisrob/kafka-experiment:${System.properties['buildNumber']}"
+    name "robisrob/kafka-experiment:${buildNumber}"
     tags 'latest'
     files tasks.distTar.outputs
+}
+
+processResources {
+    filesMatching('application.properties') {
+        expand(project.properties)
+    }
 }
