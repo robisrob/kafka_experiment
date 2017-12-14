@@ -4,6 +4,6 @@ MAINTAINER Rob Swartenbroekx "rob.swartenbroekx@gmail.com"
 WORKDIR /app
 RUN adduser -S app
 USER app
-CMD ./kafka_experiment/bin/sparkcentral-messenger-demoap
+CMD ./kafka_experiment/bin/application
 ADD ./application.tar .
 
