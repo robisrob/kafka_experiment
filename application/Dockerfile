@@ -5,5 +5,5 @@ WORKDIR /app
 RUN adduser -S app
 USER app
 CMD ./kafka_experiment/bin/sparkcentral-messenger-demoap
-ADD ./kafka_experiment.tar .
+ADD ./application.tar .
 
