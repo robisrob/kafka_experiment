@@ -4,7 +4,7 @@ plugins {
 }
 
 ext {
-    buildNumber = 'SNAPSHOT'
+    buildNumber = System.properties['buildNumber']
 }
 
 mainClassName = "com.github.robisrob.kafka_experiment.application.controllers.KafkaController"
@@ -15,7 +15,7 @@ dependencies {
 }
 
 docker {
-    name "robisrob/kafka-experiment:${buildNumber}"
+    name "robisrob/kafka-experiment:${System.properties['buildNumber']}"
     tags 'latest'
     files tasks.distTar.outputs
 }
