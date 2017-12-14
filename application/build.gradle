@@ -1,7 +1,17 @@
-apply plugin: 'application'
+plugins {
+    id 'application'
+    id 'com.palantir.docker' version '0.13.0'
+}
 
 mainClassName = "com.github.robisrob.kafka_experiment.application.controllers.KafkaController"
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation project(':domain')
+}
+
+docker {
+    name "robisrob/kafka-experiment:${System.properties['buildNumber']}"
+    tags 'latest'
+    files tasks.distTar.outputs
 }

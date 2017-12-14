@@ -1,10 +1,22 @@
+plugins {
+    id 'io.spring.dependency-management' version '1.0.3.RELEASE' apply(false)
+}
+
 subprojects {
     apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom 'io.spring.platform:platform-bom:Brussels-SR6'
+        }
+    }
 
     repositories {
         jcenter()
     }
+
     dependencies {
-        implementation "org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE"
+        implementation "org.springframework.boot:spring-boot-starter-web"
     }
 }
