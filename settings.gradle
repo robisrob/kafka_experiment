@@ -1,2 +1,4 @@
+rootProject.name = 'kafka_experiment'
+
 include 'domain'
 include 'application'
