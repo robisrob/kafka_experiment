@@ -7,11 +7,12 @@ ext {
     buildNumber = System.properties['buildNumber']
 }
 
-mainClassName = "com.github.robisrob.kafka_experiment.application.controllers.KafkaController"
+mainClassName = "com.github.robisrob.kafka_experiment.application.Application"
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation project(':domain')
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.apache.kafka:kafka-clients:1.0.0'
 }
 
 docker {
