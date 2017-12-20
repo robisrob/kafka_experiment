@@ -1,4 +1,5 @@
 rootProject.name = 'kafka_experiment'
 
 include 'consumer'
+include 'kafkastream'
 include 'application'
