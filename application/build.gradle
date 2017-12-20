@@ -10,7 +10,6 @@ ext {
 mainClassName = "com.github.robisrob.kafka_experiment.application.Application"
 
 dependencies {
-    implementation project(':domain')
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.apache.kafka:kafka-clients:1.0.0'
 }
